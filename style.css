@@ -1,0 +1,38 @@
+body {
+    background-image: url('https://source.unsplash.com/1920x1080/?business,finance');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: all 0.5s ease;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .fade-enter, .fade-exit {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .fade-enter-active, .fade-exit-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s, transform 0.3s;
+  }
+  .btn-red {
+    background-color: #f87171;
+    color: white;
+  }
+  .btn-red:hover {
+    background-color: #f56565;
+  }

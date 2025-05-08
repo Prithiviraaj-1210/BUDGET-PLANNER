@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simple Budget Planner</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-2xl font-bold text-center mb-4">Simple Budget Planner</h2>
+
+    <div id="budget-section" class="mb-4">
+      <input type="number" id="salary" placeholder="Enter your salary" class="w-full border p-2 rounded mb-2">
+      <button onclick="saveSalary()" class="bg-green-500 hover:bg-green-600 text-white rounded w-full py-2">Save Salary</button>
+    </div>
+
+    <div id="expense-section" class="hidden">
+      <input type="text" id="expense-name" placeholder="Expense name (e.g. Rent)" class="w-full border p-2 rounded mb-2">
+      <input type="number" id="expense-amount" placeholder="Amount" class="w-full border p-2 rounded mb-2">
+      <button onclick="addExpense()" class="bg-blue-500 hover:bg-blue-600 text-white rounded w-full py-2">Add Expense</button>
+
+      <div class="mt-4" id="expenses-list"></div>
+      <h3 class="mt-4 font-semibold text-center" id="remaining"></h3>
+
+      <canvas id="expense-chart" class="my-4"></canvas>
+
+      <button onclick="newPlan()" class="bg-red-500 hover:bg-red-600 text-white rounded w-full py-2">New Plan</button>
+
+      <button onclick="downloadCSV()" class="btn-red w-full py-2 mt-4">Download as CSV</button>
+    </div>
+  </div>
+<script src="script.js"></script>
+  
+ 
+</body>
+</html>
